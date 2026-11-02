@@ -164,8 +164,6 @@ flutter run -d chrome
 |:---|:---|:---|:---|
 | **Mahitha Vanam (Lead)** | Project Lead | `vanammahitha@gmail.com` | • Application architecture & folder layout<br>• `QuizProvider` state management (`ChangeNotifier`)<br>• `ApiService` OpenTDB integration & HTML unescaping<br>• GitHub Actions APK build workflow |
 | **Team Member 2** | UI Developer | `member2@quizmaster.local` | • Screen 1: Home Screen with 4 list states (GP3)<br>• Screen 2: Quiz Details Screen with rules & stats<br>• `CategoryCard` reusable widget & category theme colors |
-| **Team Member 3** | App Logic | `member3@quizmaster.local` | • Screen 3: Quiz Screen with question counter & timer<br>• `AnswerOption` widget with animated selection<br>• Screen 4: Results Screen with score calculation & review |
-| **Team Member 4** | Storage & QA | `member4@quizmaster.local` | • Screen 5: Add Custom Question Form with validation<br>• `StorageService` using `SharedPreferences`<br>• Widget tests in `quiz_screen_test.dart` & APK testing |
 
 ---
 
