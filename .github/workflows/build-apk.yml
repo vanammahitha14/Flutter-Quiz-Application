@@ -1,0 +1,64 @@
+name: Build and Release Android APK
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-apk:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+
+      - name: Set up Flutter SDK
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          cache: true
+
+      - name: Install Dependencies
+        run: flutter pub get
+
+      - name: Verify Code Quality
+        run: flutter analyze
+
+      - name: Build Android Release APK
+        run: flutter build apk --release
+
+      - name: Upload APK Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-release
+          path: build/app/outputs/flutter-apk/app-release.apk
+
+      - name: Create GitHub Release with APK
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v1.0.0
+          name: "QuizMaster v1.0.0 - Production Release APK"
+          body: |
+            ## 📱 QuizMaster v1.0.0 - Android Release APK
+
+            ### 📥 Download Instructions
+            Download the attached **`app-release.apk`** below directly onto your Android device.
+
+            ### 📋 Requirements Met:
+            - **5 Mandatory Screens:** Home, Quiz Details, Active Quiz, Results Review, Add Question Form
+            - **Provider State Management:** `QuizProvider` with `ChangeNotifier`
+            - **Four Mandatory List States (GP3):** Loading, Error with Retry, Empty, and Data
+            - **Persistent Data:** High scores & custom questions saved in `SharedPreferences`
+            - **Open Trivia Database API:** Live question fetching + offline fallback
+            - **Strict Form Validation:** Validates Category, Question, Options A–D, and Correct Key
+          files: build/app/outputs/flutter-apk/app-release.apk
