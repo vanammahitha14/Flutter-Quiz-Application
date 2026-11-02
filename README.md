@@ -158,12 +158,12 @@ flutter run -d chrome
 
 ---
 
-## 👥 8. Team Members & Contributions
+## 👥 8. Team Members & Contributions (2-Member Team)
 
-| Member Name | Role | Email | Parts Built & Core Contributions |
-|:---|:---|:---|:---|
-| **Mahitha Vanam (Lead)** | Project Lead | `vanammahitha@gmail.com` | • Application architecture & folder layout<br>• `QuizProvider` state management (`ChangeNotifier`)<br>• `ApiService` OpenTDB integration & HTML unescaping<br>• GitHub Actions APK build workflow |
-| **Team Member 2** | UI Developer | `member2@quizmaster.local` | • Screen 1: Home Screen with 4 list states (GP3)<br>• Screen 2: Quiz Details Screen with rules & stats<br>• `CategoryCard` reusable widget & category theme colors |
+| Member Name | Role & Contact | Parts Built & Core Contributions |
+|:---|:---|:---|
+| **Mahitha Vanam** *(Member 1 - Lead)* | • Role: Project Lead & State Architect<br>• GitHub: [`@vanammahitha14`](https://github.com/vanammahitha14)<br>• Email: `vanammahitha@gmail.com` | • Application architecture, layout & directory structure<br>• Central `QuizProvider` state management (`ChangeNotifier`)<br>• Screen 1: Home Screen with 4 mandatory list states (Loading, Error, Empty, Loaded - GP3)<br>• Screen 2: Quiz Details Screen with rules, duration & statistics<br>• `ApiService` Open Trivia DB REST integration & HTML unescaping<br>• GitHub Actions CI/CD workflows for automated testing, GitHub Pages & Release APK generation |
+| **Team Partner** *(Member 2 - Co-Developer)* | • Role: Full-Stack Mobile Developer & QA<br>• GitHub: `@co-developer`<br>• Email: `member2@quizmaster.local` | • Screen 3: Quiz Screen with question progress (`Q 3 of 10`), 4 answer options & tap debouncing<br>• Screen 4: Results Screen with score percentage, personal best badge & question-by-question review<br>• Screen 5: Add Custom Question Form with strict 5-field validation<br>• `StorageService` using `SharedPreferences` for persistent high scores & custom questions<br>• Reusable UI widgets (`CategoryCard`, `AnswerOption`) and Material 3 theme styling<br>• Automated unit and widget tests in `quiz_screen_test.dart` & physical device testing |
 
 ---
 
@@ -179,11 +179,12 @@ flutter run -d chrome
 
 ---
 
-## ⏱️ 10. Five-Minute Live Demonstration Schedule (Step 15)
+## ⏱️ 10. Five-Minute Live Demonstration Schedule (Step 15 - 2-Member Team)
 
-| Time | Segment | Demonstration Script & Activity |
-|:---:|:---|:---|
-| **0:00 - 0:30** *(30s)* | **Introduction** | *"Good morning. We are presenting **QuizMaster**, a complete Flutter quiz app built with Provider state management, Open Trivia API integration, persistent storage, and strict form validation."* |
-| **0:30 - 3:30** *(3m)* | **Working App Demo** | • **Home Screen:** Show Data state, filter categories using the search bar, then tap the `⋮` menu to show Loading, Error with Retry, and Empty states (GP3 compliance).<br>• **Details Screen:** Show category stats, instructions, and tap "Start Quiz Now".<br>• **Quiz Screen:** Answer questions, show progress bar (`Question 3 of 10`), and demonstrate option selection.<br>• **Result Screen:** Show score percentage, new personal best badge, and scroll down to the question-by-question review.<br>• **Add Question Form:** Leave fields empty and tap Save to demonstrate validation error messages. Then fill out a question and verify it saves to Custom Questions. |
-| **3:30 - 4:30** *(1m)* | **Technical Problem & Solution** | *"One key challenge was API rate limiting and raw HTML entities from Open Trivia DB. We resolved this by implementing an HTML unescaping parser and an offline fallback repository so the application never shows an unhandled red error screen."* |
-| **4:30 - 5:00** *(30s)* | **GitHub & APK** | Show the 14+ Git commits demonstrating continuous development from every member, and demonstrate the release APK running on a physical Android phone. |
+| Time | Presenter | Demonstration Script & Activity |
+|:---:|:---:|:---|
+| **0:00 - 0:30** *(30s)* | **Member 1** | **Introduction:** *"Good morning. We are presenting **QuizMaster**, an interactive Flutter learning app built with Provider state management, Open Trivia API integration, persistent storage, and strict form validation."* |
+| **0:30 - 2:00** *(1.5m)* | **Member 1** | **Home & Details Screens:**<br>• Demonstrate Data state and category search filtering.<br>• Tap the `⋮` menu to show the other 3 mandatory GP3 states (Loading, Error with Retry, Empty).<br>• Open Details Screen, show rules and tap "Start Quiz Now". |
+| **2:00 - 3:30** *(1.5m)* | **Member 2** | **Quiz, Results & Form Screens:**<br>• Demonstrate active quiz, answer selection highlight, and progress bar.<br>• Submit quiz: show score percentage, new personal best badge, and question-by-question review.<br>• Open Add Custom Question: tap Save on empty form to show validation errors, then add a custom question and verify it saves to Custom Questions. |
+| **3:30 - 4:30** *(1m)* | **Member 1 & 2** | **Technical Problem & Solution:** *"One key challenge was API rate limiting and raw HTML entities from Open Trivia DB. We resolved this by implementing an HTML unescaping parser and an offline fallback repository so the application never shows an unhandled red error screen."* |
+| **4:30 - 5:00** *(30s)* | **Both** | **GitHub & APK:** Show the Git commits demonstrating continuous development from both members, and demonstrate the release APK running on a physical Android phone. |
