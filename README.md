@@ -130,7 +130,7 @@ quiz_master/
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/Flutter-Quiz-Application.git
+   git clone https://github.com/vanammahitha14/Flutter-Quiz-Application.git
    cd Flutter-Quiz-Application/quiz_master
    ```
 
@@ -184,12 +184,12 @@ All tests adhere to project requirements under `test/quiz_screen_test.dart`:
 
 ## 👥 Team Members and Contributions
 
-| Member Name | Student ID | Core Responsibilities & Contributions |
-|:---|:---|:---|
-| **Member 1 (Lead)** | `FA21-BCS-001` | Project architecture, `QuizProvider` state management, and API integration |
-| **Member 2** | `FA21-BCS-002` | Home Screen with 4 list states (Loading, Error, Empty, Data) & Details Screen |
-| **Member 3** | `FA21-BCS-003` | Quiz Screen, option selection animations, and Results Screen review system |
-| **Member 4** | `FA21-BCS-004` | Add Custom Question Screen form validation, Local Storage, & Release APK build |
+| Member Name | Role / GitHub | Email / Contact | Core Responsibilities & Contributions |
+|:---|:---|:---|:---|
+| **Mahitha Vanam (Lead)** | `@vanammahitha14` | `vanammahitha@gmail.com` | Project architecture, `QuizProvider` state management, and API integration |
+| **Team Member 2** | `Contributor` | `member2@quizmaster.local` | Home Screen with 4 list states (Loading, Error, Empty, Data) & Details Screen |
+| **Team Member 3** | `Contributor` | `member3@quizmaster.local` | Quiz Screen, option selection animations, and Results Screen review system |
+| **Team Member 4** | `Contributor` | `member4@quizmaster.local` | Add Custom Question Screen form validation, Local Storage, & Release APK build |
 
 ---
 
